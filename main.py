@@ -1,4 +1,4 @@
-from stats import word_count
+from stats import word_count, character_count
 
 def main():
     book_path = "books/frankenstein.txt"
