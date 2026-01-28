@@ -16,3 +16,19 @@ def character_count(book_text):
             character_dict[character] = 1
     
     return character_dict
+
+def dict_sort_helper(char_dict):
+    return char_dict["num"]
+    
+def sort_dict(char_dict):
+    char_dict_list = []
+
+    for char in char_dict:
+        count = char_dict[char]
+        char_dict_list.append({
+            "char": char,
+            "num": count,
+        })
+    char_dict_list.sort(reverse=True, key=dict_sort_helper)
+    
+    return char_dict_list
