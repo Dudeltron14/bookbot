@@ -2,8 +2,13 @@ from stats import word_count, character_count, sort_dict
 import sys
 
 def main():
+    #checks if sys.argv has two entries, otherwise prints the intended usage for the command.
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    
     #sets book path and makes book text into a string
-    book_path = ""
+    book_path = sys.argv[1]
     book_text = get_book_text(f"{book_path}")
     
     #Prints headers
