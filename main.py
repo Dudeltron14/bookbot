@@ -1,8 +1,9 @@
 from stats import word_count, character_count, sort_dict
+import sys
 
 def main():
     #sets book path and makes book text into a string
-    book_path = "books/frankenstein.txt"
+    book_path = ""
     book_text = get_book_text(f"{book_path}")
     
     #Prints headers
